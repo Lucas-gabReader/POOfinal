@@ -3,28 +3,25 @@ package Carro;
 import java.util.Scanner;
 
 public class Carro {
-    String nome;
-    String marca;
-    int ano;
-    String modelo;
+        private String modelo;
+        private int ano;
+        private String cor;
 
+        public Carro(String modelo, int ano, String cor) {
+            this.modelo = modelo;
+            this.ano = ano;
+            this.cor = cor;
+        }
 
-    public void imprmirinformacoes(){
-        System.out.println("Nome do carro: " + nome);
-        System.out.println("Marca do carro: " + marca);
-        System.out.println("ano do carro: " + ano);
-        System.out.println("Modelo Do carro: " + modelo);
+        public void exibirFichaTecnica() {
+            System.out.println("Modelo: " + modelo);
+            System.out.println("Ano: " + ano);
+            System.out.println("Cor: " + cor);
+        }
 
+        public int calcularIdade(int anoAtual) {
+            return anoAtual - ano;
+        }
     }
-    public void lerinformacoesdocarro(){
-        Scanner ler = new Scanner(System.in);
-        System.out.println("Qual o nome do seu carro: ");
-        nome = ler.next();
-        System.out.println("Qual marca seria o seu carro?: ");
-        marca = ler.next();
-        System.out.println("Qual o modelo do seu carro?: ");
-        modelo = ler.next();
-        System.out.println("Qual o ano do seu carro?: ");
-        ano = ler.nextInt();
-    }
-}
+
+
